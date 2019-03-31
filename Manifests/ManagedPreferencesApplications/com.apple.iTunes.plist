@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>pfm_app_url</key>
+	<string>https://www.apple.com/itunes/</string>
+	<key>pfm_description</key>
+	<string>iTunes settings</string>
+	<key>pfm_documentation_url</key>
+	<string></string>
+	<key>pfm_domain</key>
+	<string>com.apple.iTunes</string>
+	<key>pfm_format_version</key>
+	<integer>1</integer>
+	<key>pfm_last_modified</key>
+	<date>2019-03-31T16:43:49Z</date>
+	<key>pfm_subkeys</key>
+	<array>
+		<dict>
+			<key>pfm_default</key>
+			<string>Configures iTunes settings</string>
+			<key>pfm_description</key>
+			<string>Description of the payload.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable description of this payload. This description is shown on the Detail screen.</string>
+			<key>pfm_name</key>
+			<string>PayloadDescription</string>
+			<key>pfm_title</key>
+			<string>Payload Description</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>iTunes</string>
+			<key>pfm_description</key>
+			<string>Name of the payload.</string>
+			<key>pfm_description_reference</key>
+			<string>A human-readable name for the profile payload. This name is displayed on the Detail screen. It does not have to be unique.</string>
+			<key>pfm_name</key>
+			<string>PayloadDisplayName</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Display Name</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.apple.iTunes</string>
+			<key>pfm_description</key>
+			<string>A unique identifier for the payload, dot-delimited. Usually root PayloadIdentifier+subidentifier</string>
+			<key>pfm_description_reference</key>
+			<string>A reverse-DNS-style identifier for the specific payload. It is usually the same identifier as the root-level PayloadIdentifier value with an additional component appended.</string>
+			<key>pfm_name</key>
+			<string>PayloadIdentifier</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Identifier</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string>com.apple.iTunes</string>
+			<key>pfm_description</key>
+			<string>The type of the payload, a reverse dns string.</string>
+			<key>pfm_description_reference</key>
+			<string>The payload type.</string>
+			<key>pfm_name</key>
+			<string>PayloadType</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Type</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<string></string>
+			<key>pfm_description</key>
+			<string>Unique identifier for the payload (format 01234567-89AB-CDEF-0123-456789ABCDEF)</string>
+			<key>pfm_description_reference</key>
+			<string>A globally unique identifier for the payload. The actual content is unimportant, but it must be globally unique. In macOS, you can use uuidgen to generate reasonable UUIDs.</string>
+			<key>pfm_format</key>
+			<string>^[0-9A-Za-z]{8}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{4}-[0-9A-Za-z]{12}$</string>
+			<key>pfm_name</key>
+			<string>PayloadUUID</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload UUID</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_default</key>
+			<integer>1</integer>
+			<key>pfm_description</key>
+			<string>The version of the whole configuration profile.</string>
+			<key>pfm_description_reference</key>
+			<string>The version number of the individual payload.
+A profile can consist of payloads with different version numbers. For example, changes to the VPN software in iOS might introduce a new payload version to support additional features, but Mail payload versions would not necessarily change in the same release.</string>
+			<key>pfm_name</key>
+			<string>PayloadVersion</string>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_title</key>
+			<string>Payload Version</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>This value describes the issuing organization of the profile, as displayed to the user.</string>
+			<key>pfm_description_reference</key>
+			<string>Optional. A human-readable string containing the name of the organization that provided the profile. The payload organization for a payload need not match the payload organization in the enclosing profile.</string>
+			<key>pfm_name</key>
+			<string>PayloadOrganization</string>
+			<key>pfm_title</key>
+			<string>Payload Organization</string>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_name</key>
+			<string>PFC_SegmentedControl_0</string>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>General</string>
+				<string>Devices</string>
+				<string>Downloads</string>
+				<string>Playback</string>
+				<string>Restrictions</string>
+				<string>Sharing</string>
+				<string>Store</string>
+				<string>Advanced</string>
+			</array>
+			<key>pfm_require</key>
+			<string>always</string>
+			<key>pfm_segments</key>
+			<dict>
+				<key>General</key>
+				<array>
+					<string>license-agreements</string>
+				</array>
+				<key>Devices</key>
+				<array>
+					<string>dontAutomaticallySyncIPods</string>
+				</array>
+				<key>Downloads</key>
+				<array>
+					<string></string>
+				</array>
+				<key>Playback</key>
+				<array>
+					<string></string>
+				</array>
+				<key>Restrictions</key>
+				<array>
+					<string>disableAppleMusic</string>
+					<string>disableMusicSocial</string>
+					<string>disableMusicStore</string>
+					<string>disablePodcasts</string>
+					<string>disableRadio</string>
+					<string>disableShareLibraryInfo</string>
+					<string>disableSharedMusic</string>
+					<string>ratingSystemID</string>
+					<string>restrictExplicit</string>
+					<string>restrictExplicitBooks</string>
+					<string>restrictMovies</string>
+					<string>restrictTVShows</string>
+					<string>restrictGames</string>
+					<string>gamesLimit</string>
+					<string>moviesLimit</string>
+					<string>tvShowsLimit</string>
+				</array>
+				<key>Sharing</key>
+				<array>
+					<string></string>
+				</array>
+				<key>Store</key>
+				<array>
+					<string></string>
+				</array>
+				<key>Advanced</key>
+				<array>
+					<string>disableCheckForApplicationUpdates</string>
+				</array>
+			</dict>
+			<key>pfm_type</key>
+			<string>string</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Skip iTunes software license agreement window on first launch.</string>
+			<key>pfm_name</key>
+			<string>license-agreements</string>
+			<key>pfm_subkeys</key>
+			<array>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_name</key>
+					<string>EA1067</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+				<dict>
+					<key>pfm_default</key>
+					<true/>
+					<key>pfm_name</key>
+					<string>EA1510</string>
+					<key>pfm_type</key>
+					<string>boolean</string>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>License Agreements</string>
+			<key>pfm_type</key>
+			<string>dictionary</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>disableAppleMusic</string>
+			<key>pfm_title</key>
+			<string>Disable Apple Music</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Setting this value to 'true' prevents iTunes from checking for updates automatically. Also locks out the user from accessing this preference.</string>
+			<key>pfm_name</key>
+			<string>disableCheckForApplicationUpdates</string>
+			<key>pfm_title</key>
+			<string>Disable checks for new software updates automatically</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>disableMusicSocial</string>
+			<key>pfm_title</key>
+			<string>Disable Music Profiles &amp; Posts</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>If the iTunes Store is disabled, so too must Apple Music and Music Profiles &amp; Posts.</string>
+			<key>pfm_name</key>
+			<string>disableMusicStore</string>
+			<key>pfm_exclude</key>
+			<array>
+				<dict>
+					<key>pfm_target_conditions</key>
+					<array>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<false/>
+							</array>
+							<key>pfm_target</key>
+							<string>disableAppleMusic</string>
+						</dict>
+						<dict>
+							<key>pfm_range_list</key>
+							<array>
+								<false/>
+							</array>
+							<key>pfm_target</key>
+							<string>disableMusicSocial</string>
+						</dict>
+					</array>
+				</dict>
+			</array>
+			<key>pfm_title</key>
+			<string>Disable iTunes Store</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>disablePodcasts</string>
+			<key>pfm_title</key>
+			<string>Disable Podcasts</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>disableRadio</string>
+			<key>pfm_title</key>
+			<string>Disable Internet Radio</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>dontAutomaticallySyncIPods</string>
+			<key>pfm_title</key>
+			<string>Prevent iPods, iPhones, and iPads from syncing automatically</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>disableShareLibraryInfo</string>
+			<key>pfm_title</key>
+			<string>Disable Shared iTunes Libraries</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>ratingSystemID</string>
+			<key>pfm_range_list</key>
+			<array>
+				<integer>1</integer>
+				<integer>90</integer>
+				<integer>91</integer>
+				<integer>83</integer>
+				<integer>84</integer>
+				<integer>24</integer>
+				<integer>85</integer>
+				<integer>5</integer>
+				<integer>10</integer>
+				<integer>86</integer>
+				<integer>87</integer>
+				<integer>88</integer>
+				<integer>89</integer>
+				<integer>71</integer>
+				<integer>14</integer>
+				<integer>96</integer>
+				<integer>92</integer>
+				<integer>97</integer>
+				<integer>25</integer>
+				<integer>101</integer>
+				<integer>26</integer>
+				<integer>136</integer>
+				<integer>56</integer>
+				<integer>27</integer>
+				<integer>99</integer>
+				<integer>57</integer>
+				<integer>6</integer>
+				<integer>102</integer>
+				<integer>117</integer>
+				<integer>131</integer>
+				<integer>28</integer>
+				<integer>68</integer>
+				<integer>29</integer>
+				<integer>93</integer>
+				<integer>30</integer>
+				<integer>31</integer>
+				<integer>32</integer>
+				<integer>20</integer>
+				<integer>103</integer>
+				<integer>55</integer>
+				<integer>33</integer>
+				<integer>104</integer>
+				<integer>34</integer>
+				<integer>35</integer>
+				<integer>105</integer>
+				<integer>18</integer>
+				<integer>7</integer>
+				<integer>109</integer>
+				<integer>72</integer>
+				<integer>8</integer>
+				<integer>108</integer>
+				<integer>23</integer>
+				<integer>107</integer>
+				<integer>36</integer>
+				<integer>110</integer>
+				<integer>53</integer>
+				<integer>37</integer>
+				<integer>58</integer>
+				<integer>38</integer>
+				<integer>73</integer>
+				<integer>112</integer>
+				<integer>59</integer>
+				<integer>3</integer>
+				<integer>111</integer>
+				<integer>13</integer>
+				<integer>52</integer>
+				<integer>9</integer>
+				<integer>113</integer>
+				<integer>74</integer>
+				<integer>114</integer>
+				<integer>94</integer>
+				<integer>75</integer>
+				<integer>60</integer>
+				<integer>39</integer>
+				<integer>118</integer>
+				<integer>40</integer>
+				<integer>16</integer>
+				<integer>61</integer>
+				<integer>76</integer>
+				<integer>62</integer>
+				<integer>41</integer>
+				<integer>95</integer>
+				<integer>120</integer>
+				<integer>17</integer>
+				<integer>106</integer>
+				<integer>77</integer>
+				<integer>119</integer>
+				<integer>121</integer>
+				<integer>122</integer>
+				<integer>125</integer>
+				<integer>15</integer>
+				<integer>4</integer>
+				<integer>42</integer>
+				<integer>123</integer>
+				<integer>124</integer>
+				<integer>19</integer>
+				<integer>126</integer>
+				<integer>43</integer>
+				<integer>127</integer>
+				<integer>44</integer>
+				<integer>45</integer>
+				<integer>63</integer>
+				<integer>46</integer>
+				<integer>22</integer>
+				<integer>128</integer>
+				<integer>47</integer>
+				<integer>78</integer>
+				<integer>116</integer>
+				<integer>129</integer>
+				<integer>100</integer>
+				<integer>115</integer>
+				<integer>64</integer>
+				<integer>48</integer>
+				<integer>49</integer>
+				<integer>138</integer>
+				<integer>69</integer>
+				<integer>12</integer>
+				<integer>70</integer>
+				<integer>54</integer>
+				<integer>130</integer>
+				<integer>21</integer>
+				<integer>11</integer>
+				<integer>65</integer>
+				<integer>79</integer>
+				<integer>140</integer>
+				<integer>66</integer>
+				<integer>134</integer>
+				<integer>133</integer>
+				<integer>80</integer>
+				<integer>132</integer>
+				<integer>135</integer>
+				<integer>81</integer>
+				<integer>98</integer>
+				<integer>2</integer>
+				<integer>50</integer>
+				<integer>82</integer>
+				<integer>51</integer>
+				<integer>67</integer>
+				<integer>137</integer>
+				<integer>139</integer>
+			</array>
+			<key>pfm_range_list_titles</key>
+			<array>
+				<string>United States</string>
+				<string>Albania</string>
+				<string>Angola</string>
+				<string>Anguilla</string>
+				<string>Antigua and Barbuda</string>
+				<string>Argentina</string>
+				<string>Armenia</string>
+				<string>Australia</string>
+				<string>Austria</string>
+				<string>Azerbaijan</string>
+				<string>Bahamas</string>
+				<string>Bahrain</string>
+				<string>Barbados</string>
+				<string>Belarus</string>
+				<string>Belgium</string>
+				<string>Belize</string>
+				<string>Benin</string>
+				<string>Bermuda</string>
+				<string>Bolivia</string>
+				<string>Bostwana</string>
+				<string>Brazil</string>
+				<string>British Virigin Islands</string>
+				<string>Brunei</string>
+				<string>Bulgaria</string>
+				<string>Burkina Faso</string>
+				<string>Cambodia</string>
+				<string>Canada</string>
+				<string>Cape Verde</string>
+				<string>Cayman Islands</string>
+				<string>Chad</string>
+				<string>Chile</string>
+				<string>China</string>
+				<string>Colombia</string>
+				<string>Congo - Brazzaville</string>
+				<string>Costa Rica</string>
+				<string>Cyprus</string>
+				<string>Czech Republic</string>
+				<string>Denmark</string>
+				<string>Dominica</string>
+				<string>Dominican Republic</string>
+				<string>Ecuador</string>
+				<string>Egypt</string>
+				<string>El Salvador</string>
+				<string>Estonia</string>
+				<string>Fiji</string>
+				<string>Finland</string>
+				<string>France</string>
+				<string>Gambia</string>
+				<string>Georgia</string>
+				<string>Germany</string>
+				<string>Ghana</string>
+				<string>Greece</string>
+				<string>Grenada</string>
+				<string>Guatemala</string>
+				<string>Guinea-Bissau</string>
+				<string>Guyana</string>
+				<string>Honduras</string>
+				<string>Hong Kong SAR China</string>
+				<string>Hungary</string>
+				<string>Iceland</string>
+				<string>India</string>
+				<string>Indonesia</string>
+				<string>Ireland</string>
+				<string>Israel</string>
+				<string>Italy</string>
+				<string>Jamaica</string>
+				<string>Japan</string>
+				<string>Jordan</string>
+				<string>Kazakhstan</string>
+				<string>Kenya</string>
+				<string>Kuwait</string>
+				<string>Kyrgyzstan</string>
+				<string>Laos</string>
+				<string>Latvia</string>
+				<string>Lebanon</string>
+				<string>Lithuania</string>
+				<string>Luxembourg</string>
+				<string>Macau SAR China</string>
+				<string>Macedonia</string>
+				<string>Malaysia</string>
+				<string>Malta</string>
+				<string>Mauritania</string>
+				<string>Mauritius</string>
+				<string>Mexico</string>
+				<string>Micronesia</string>
+				<string>Moldova</string>
+				<string>Mongolia</string>
+				<string>Mozambique</string>
+				<string>Namibia</string>
+				<string>Nepal</string>
+				<string>Netherlands</string>
+				<string>New Zealand</string>
+				<string>Nicaragua</string>
+				<string>Niger</string>
+				<string>Nigeria</string>
+				<string>Norway</string>
+				<string>Oman</string>
+				<string>Panama</string>
+				<string>Papua New Guinea</string>
+				<string>Paraguay</string>
+				<string>Peru</string>
+				<string>Philippines</string>
+				<string>Poland</string>
+				<string>Portugal</string>
+				<string>Qatar</string>
+				<string>Romania</string>
+				<string>Russia</string>
+				<string>Saint Kitts and Nevis</string>
+				<string>Saudi Arabia</string>
+				<string>Senegal</string>
+				<string>Seychelles</string>
+				<string>Singapore</string>
+				<string>Slovakia</string>
+				<string>Slovenia</string>
+				<string>South Africa</string>
+				<string>South Korea</string>
+				<string>Spain</string>
+				<string>Sri Lanka</string>
+				<string>Suriname</string>
+				<string>Swaziland</string>
+				<string>Sweden</string>
+				<string>Switzerland</string>
+				<string>Taiwan</string>
+				<string>Tajikistan</string>
+				<string>Tanzania</string>
+				<string>Thailand</string>
+				<string>Trinidad and Tobago</string>
+				<string>Tunisia</string>
+				<string>Turkey</string>
+				<string>Turkmenistan</string>
+				<string>Uganda</string>
+				<string>Ukraine</string>
+				<string>United Arab Emirates</string>
+				<string>United Kingdom</string>
+				<string>Uruguay</string>
+				<string>Uzbekistan</string>
+				<string>Venezuela</string>
+				<string>Vietnam</string>
+				<string>Yemen</string>
+				<string>Zimbabwe</string>
+			</array>
+			<key>pfm_title</key>
+			<string>Country ratings</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>When you restrict explicit content, you will not be able to play, preview, purchase, or subscribe to content marked as explicit by those who provided it to Apple.</string>
+			<key>pfm_name</key>
+			<string>restrictExplicit</string>
+			<key>pfm_title</key>
+			<string>Restrict music with explicit content</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Restrictions apply to playback, sharing, iTunes purchases, and the iTunes Store.</string>
+			<key>pfm_name</key>
+			<string>restrictExplicitBooks</string>
+			<key>pfm_title</key>
+			<string>Restrict books with explicit sexual content</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>restrictMovies</string>
+			<key>pfm_title</key>
+			<string>Restrict Movies</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>restrictTVShows</string>
+			<key>pfm_title</key>
+			<string>Restrict TV Shows</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string></string>
+			<key>pfm_name</key>
+			<string>restrictGames</string>
+			<key>pfm_title</key>
+			<string>Restrict Games</string>
+			<key>pfm_type</key>
+			<string>boolean</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Number of Games to allow to be downloaded locally. Set to 0 to prevent any Games from being downloaded locally.</string>
+			<key>pfm_name</key>
+			<string>gamesLimit</string>
+			<key>pfm_title</key>
+			<string>Limit the number of Games</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>0 - N</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Number of Movies to allow to be downloaded locally. Set to 0 to prevent any Movies from being downloaded locally.</string>
+			<key>pfm_name</key>
+			<string>moviesLimit</string>
+			<key>pfm_title</key>
+			<string>Limit the number of Movies</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>0 - N</string>
+		</dict>
+		<dict>
+			<key>pfm_description</key>
+			<string>Number of TV Shows to allow to be downloaded locally. Set to 0 to prevent any TV Shows from being downloaded locally.</string>
+			<key>pfm_name</key>
+			<string>tvShowsLimit</string>
+			<key>pfm_title</key>
+			<string>Limit the number of TV Shows</string>
+			<key>pfm_type</key>
+			<string>integer</string>
+			<key>pfm_value_unit</key>
+			<string>0 - N</string>
+		</dict>
+	</array>
+	<key>pfm_targets</key>
+	<array>
+		<string>system</string>
+		<string>user</string>
+	</array>
+	<key>pfm_title</key>
+	<string>iTunes</string>
+	<key>pfm_unique</key>
+	<true/>
+	<key>pfm_version</key>
+	<integer>1</integer>
+</dict>
+</plist>
