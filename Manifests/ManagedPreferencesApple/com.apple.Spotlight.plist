@@ -206,6 +206,8 @@ A profile can consist of payloads with different version numbers. For example, c
 			</array>
 			<key>pfm_type</key>
 			<string>array</string>
+			<key>pfm_value_unique</key>
+			<true/>
 		</dict>
 	</array>
 	<key>pfm_title</key>
